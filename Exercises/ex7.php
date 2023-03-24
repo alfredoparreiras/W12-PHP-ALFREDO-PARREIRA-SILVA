@@ -48,6 +48,8 @@
         ],
     ];
 
+    echo 
+
     // Products 
 
     // echo '<table>';
@@ -71,17 +73,7 @@
 
     function showTable($table){
 
-        $keys = array_keys($table);
-        $count = sizeof($keys);
-
-        if($table == []){
-            echo "Table is empty.";
-        }
-        else{
-            echo '<table>';
-            foreach()
-            
-        }
+        
 
 
     }
