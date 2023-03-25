@@ -63,3 +63,9 @@ showTitle('Exercise 5: reverse the array with array_reverse()');
 // YOUR CODE HERE
 $array2 = array_reverse($newArray);
 print_r($array2);
+
+
+echo "-----------------------------------------------------<br><br><br><br><br>";
+
+$myDate = mktime(9,10,10,09,19,1990);
+echo date("d-m-Y")
