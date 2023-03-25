@@ -1,0 +1,1 @@
+This is a txt file, used to test some PHP file functions.
