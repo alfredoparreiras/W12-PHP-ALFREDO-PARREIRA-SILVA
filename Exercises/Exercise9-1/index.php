@@ -65,4 +65,4 @@ echo $days_between;
 
 showTitle('Exercice 8 Date displayed like Thurday, 10 january 2019');
 // your code here
-echo date("l,d F o",$timeStamp);
+echo date("l,d F qo",$timeStamp);
