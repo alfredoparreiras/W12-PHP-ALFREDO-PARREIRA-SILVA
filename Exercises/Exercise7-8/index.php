@@ -185,12 +185,13 @@ $author = 'Alfredo Parreira';
             'qty_in_stock' => 1230,
         ],
     ];
+    
     function tableList($products)
     {
-        
+        $contentPage = null;
         for ($i = 0; $i < count($products); $i++) {
             if($products[$i]['qty_in_stock'] > 0){
-                echo "<div class='product'>
+                $contentPage .= "<div class='product'>
                     <img src='{$products[$i]['pic']}'>
                     <h1 class='name'>{$products[$i]['name']}</h1>
                     <p class='description'>{$products[$i]['description']}</p>
@@ -198,11 +199,12 @@ $author = 'Alfredo Parreira';
                 </div>";
             }
         }
+
+        return $contentPage;
     }
 
-    $content = tableList($products);
     ?>
-    <?php $content ?>
+    <?php echo tableList($products) ?>
 
     <!-- FOOTER -->
     <footer>

@@ -48,36 +48,34 @@
         ],
     ];
 
-    echo 
+
 
     // Products 
 
-    // echo '<table>';
-    // echo '<tr><th>ID</th><th>Name</th><th>Price</th><th>Weight</th>';
-    // for($i = 0; $i < 3; $i++){
-    //     echo '<tr>';
-    //     echo "<td>{$products[$i]['id']}</td>";
-    //     echo "<td>{$products[$i]['name']}</td>";
-    //     echo "<td class='price'>{$products[$i]['price']}</td>";
-    //     echo "<td>{$products[$i]['weight']}</td>";
-    //     echo '</tr>';
-    // }
-    // echo '</table>';
 
+        $arrayIds = array_keys($products[0]);
 
-        $keys = array_keys($products[0]);
-
+        echo "{$arrayIds[0]}";
         // print_r($keys);
-        $number = sizeof($keys);
+    
 
 
     function showTable($table){
+        $content = '';
+        $content .= '<table>';
+            $content .= '<tr><th>ID</th><th>Name</th><th>Price</th><th>Weight</th>';
+            for($i = 0; $i < 3; $i++){
+                $content .= '<tr>';
+                $content .= "<td>{$table[$i]['id']}</td>";
+                $content .= "<td>{$table[$i]['name']}</td>";
+                $content .= "<td class='price'>{$table[$i]['price']}</td>";
+                $content .= "<td>{$table[$i]['weight']}</td>";
+                $content .= '</tr>';
+            }
+        $content .= '</table>';
 
-        
-
-
+        return $content;
     }
-
-    showTable($products);
-
+    
+    echo showTable($products);
 ?>

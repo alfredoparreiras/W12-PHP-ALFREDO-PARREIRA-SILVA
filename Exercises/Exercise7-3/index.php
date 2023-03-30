@@ -93,16 +93,20 @@ $forecasts = [
             <table>
                 <?php
                //YOUR CODE HERE
-                foreach($forecasts as $forecast => $data){
-                    echo "<div class='dailyForecast'>
+               function weather($forecasts){
+                    $content = null;
+
+                        foreach($forecasts as $forecast => $data){
+                            $content .= "<div class='dailyForecast'>
                             <p class='ForescastP'>{$forecast}</p>
                             <img src='{$data['image_file']}'>
                             <p>{$data['temperature']}</p>
-                        </div>";
+                            </div>";
+                        }
 
-                       
+                    return $content;       
                 }
-                
+                echo weather($forecasts);
                 ?>
             </table>
         </main>
