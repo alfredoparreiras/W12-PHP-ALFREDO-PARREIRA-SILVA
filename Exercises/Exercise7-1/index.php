@@ -24,7 +24,9 @@ $provinces = [
         foreach($provinces as $data ){
             $content .= "<option value='{$data['code']}' id='{$data['id']}'>{$data['name']}</option>";
         }
+        $name = "Vachon";
 
+        function display(){}
         echo $content;
         ?>
     </select>

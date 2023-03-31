@@ -51,32 +51,29 @@ $forecasts = [
             height: 100vh;
             display: flex;
             align-items: center;
-            justify-content: center;    
+            justify-content: center;
             background-color: #D9AFD9;
             background-image: linear-gradient(135deg, #D9AFD9 0%, #97D9E1 42%);
-
-
         }
 
-        .dailyForecast{
+        .dailyForecast {
             display: flex;
             margin: 0 auto;
             justify-content: space-around;
             margin-bottom: 24px;
-
         }
 
-        h1{
+        h1 {
             text-align: center;
         }
 
-        .container{
+        .container {
             padding: 3rem;
             border: 3px solid #D9AFD9;
             margin: 0 auto;
         }
 
-        .ForescastP{
+        .ForescastP {
             font-size: 1.2rem;
             font-weight: 600;
         }
@@ -92,19 +89,19 @@ $forecasts = [
         <main>
             <table>
                 <?php
-               //YOUR CODE HERE
-               function weather($forecasts){
+                //YOUR CODE HERE
+                function weather($forecasts)
+                {
                     $content = null;
-
-                        foreach($forecasts as $forecast => $data){
-                            $content .= "<div class='dailyForecast'>
+                    
+                    foreach ($forecasts as $forecast => $data) {
+                        $content .= "<div class='dailyForecast'>
                             <p class='ForescastP'>{$forecast}</p>
                             <img src='{$data['image_file']}'>
                             <p>{$data['temperature']}</p>
                             </div>";
-                        }
-
-                    return $content;       
+                    }
+                    return $content;
                 }
                 echo weather($forecasts);
                 ?>
