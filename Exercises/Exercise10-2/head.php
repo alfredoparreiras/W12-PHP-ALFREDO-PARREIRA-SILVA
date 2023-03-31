@@ -1,8 +1,8 @@
 <head>
 <meta charset="UTF-8">
-<title><?= $title ?></title>
-<meta name="description" content="<?= $description ?>">
-<meta name="author" content="<?= $author ?>">
+<title><?= $pageData['title'] ?></title>
+<meta name="description" content="<?= $pageData['description'] ?>">
+<meta name="author" content="<?= $pageData['author'] ?>">
 <link rel="shortcut icon" href="<?= COMPANY_LOGO ?>" type="image/x-icon">
 <link rel="stylesheet" href="style.css">
 

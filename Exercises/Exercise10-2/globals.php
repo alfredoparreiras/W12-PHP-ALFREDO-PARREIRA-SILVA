@@ -14,5 +14,6 @@
         'title' => 'MaschesterUnitedCanada.com',
         'description' => 'Scale Models of Classic Cars, Trucks, Planes, Motorcyles and more',
         'author' => 'Alfredo Parreira',
-        'content' => null
+        'content' => null,
+        'countPage' => 0
     ];

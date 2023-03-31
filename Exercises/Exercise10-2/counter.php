@@ -1,31 +1,25 @@
 <?php
     class Counter{
         
-        
         public static function CountPage(){
-            
-            session_start();
-
-            if(is_dir("log")){
-                if(isset($_SESSION['views'])){
-                    $_SESSION['views'] = $_SESSION['views']+1;
-                }
-                else{
-                    $_SESSION['views'] = 1;
-                }
-
-                file_put_contents('log/CountPage.log',$_SESSION['views']);
+            $visitors = date(DATE_RFC2822);
+                    
+            if(!file_exists('log/CountPage.txt')){
+                $counter = DEFAULT_PAGE_DATA['countPage'];
+                
+            }else{
+                $counter = file_get_contents('log/CountPage.txt');
             }
-            else{
-                echo "Your log folder wasn't found.";
-            }
+            $counter++;
+            file_put_contents('log/Visitors.txt',$visitors . PHP_EOL, FILE_APPEND);
+            file_put_contents('log/CountPage.txt', $counter);
         }
 
         public static function ReadPageCounter(){
             $counter = null;
             
-            if(is_dir("log")){
-                $counter = file_get_contents('log/CountPage.log');
+            if(is_dir("log") && is_file('log/CountPage.txt')){
+                $counter = file_get_contents('log/CountPage.txt');
             }
             else{
                 echo "Your log folder wasn't found.";
