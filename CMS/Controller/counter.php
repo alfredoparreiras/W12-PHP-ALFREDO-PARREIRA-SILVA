@@ -3,6 +3,7 @@
         
         public static function CountPage(){
             $visitors = date(DATE_RFC2822);
+            $ip = $_SERVER['REMOTE_ADDR'];
                     
             if(!file_exists('../log/CountPage.txt')){
                 $counter = DEFAULT_PAGE_DATA['count'];
@@ -12,7 +13,7 @@
             }
 
             $counter += 1;
-            file_put_contents('../log/Visitors.txt', 'Visit at : ' . $visitors . PHP_EOL, FILE_APPEND);
+            file_put_contents('../log/Visitors.txt', 'Visit at : ' . $visitors . 'IP Number : ' . $ip . PHP_EOL, FILE_APPEND);
             file_put_contents('../log/CountPage.txt', $counter);
         }
 
