@@ -2,8 +2,6 @@
     class Counter{
         
         public static function CountPage(){
-            $visitors = date(DATE_RFC2822);
-            $ip = $_SERVER['REMOTE_ADDR'];
                     
             if(!file_exists('../log/CountPage.txt')){
                 $counter = DEFAULT_PAGE_DATA['count'];
@@ -13,8 +11,15 @@
             }
 
             $counter += 1;
-            file_put_contents('../log/Visitors.txt', 'Visit at : ' . $visitors . 'IP Number : ' . $ip . PHP_EOL, FILE_APPEND);
             file_put_contents('../log/CountPage.txt', $counter);
+        }
+
+        public static function CountLoggedPage(){
+            date_default_timezone_set('America/Toronto');
+            $dateVisit = date(DATE_RFC2822);
+            $ip = $_SERVER['REMOTE_ADDR'];
+            $email = $_REQUEST['email'];
+            file_put_contents('../log/Visitors.txt','IP Number : ' . $ip . "Email : " . $email . ' Visit at : ' . $dateVisit .  PHP_EOL, FILE_APPEND);
         }
 
         public static function ReadPageCounter(){
