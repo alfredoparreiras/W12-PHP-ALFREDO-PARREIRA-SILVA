@@ -14,7 +14,7 @@
                 <?php
                 if(isset($_SESSION['email'])){
                         echo $_SESSION['email'];
-                        echo "<a href='index.php?op=5'>Logout</a>";
+                        echo "<a href='index.php?op=6'>Logout</a>";
                 }
                 ?>
         </a>

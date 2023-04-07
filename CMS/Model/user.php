@@ -158,7 +158,10 @@
                                 <input type='checkbox' name='spamOk' value='1' id='spamCheckInput' checked>
                                 <label for='spamCheckInput'>Do you agree in receive our communication</label>
                             </div>
-                            <button type='submit' class='form__button'>Submit</button>
+                            <div>
+                                <button type='submit' class='form__button'>Submit</button>
+                                <button type='button' onclick='history.back();'>Back</button>
+                            </div>
                         </form>";
 
                         return $content;
@@ -273,7 +276,7 @@
             }
 
             if($pw != $pw2){
-               
+            
                 $errorMessage .= "Your passwords must be equals";
             }
 
