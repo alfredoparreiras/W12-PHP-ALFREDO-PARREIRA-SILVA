@@ -4,6 +4,8 @@
     require_once '../View/webpage.php';
     require_once 'counter.php';
     require_once '../Model/user.php';
+    require_once '../Model/customers.php';
+    require_once '../Controller/Db_pdo.php';
     session_start();
 
     if(!isset($_REQUEST['op']))
@@ -104,6 +106,10 @@
             $pageData['title'] = COMPANY_NAME.' - Visitors Log';
             $pageData['content'] = "<h1>Visitors</h1><div class='displayVisitors'><p>{$data}</p></div>";
             WebPage::render($pageData); 
+            break;
+        case 400: 
+            $pageData['content'] = Customer::ListCustomers();
+            WebPage::render($pageData);
             break;
         default:
             header("HTTP/1.0 404 - Invalid Operation in file index.php");
