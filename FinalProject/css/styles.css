@@ -1,0 +1,313 @@
+:root{
+    --color-primary: #04151f;
+    --color-background: #F7F7F2; 
+    --color-accent : #EA3323;
+    --larger-typho : 5.653rem;
+    --medium-typho: 2.827rem;
+    --text-typho: 1.514rem;
+    --border-radius: 10px;
+}
+
+html{
+    /* Setting root font to 10px;  */
+    font-size: 62.5%; 
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+body{
+    background-color: var(--color-background);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+p{
+    font-size: var(--text-typho);
+}
+
+/* Typhograpy */
+
+/* 
+5.653rem/56.53px
+3.998rem/39.98px
+2.827rem/28.27px
+1.999rem/19.99px
+1.414rem/14.14px
+1rem/10.00px
+0.707rem/7.07px
+0.5rem/5.00px
+0.354rem/3.54px 
+*/
+
+h1 {
+    color:var(--color-primary);
+    font-size: var(--larger-typho);
+    margin: 1.5rem 0;
+}
+
+h3 {
+    color:var(--color-primary);
+    font-size: var(--medium-typho);
+    margin: 1.5rem 0;
+}
+
+
+/* Header */
+#logo{
+    width: 4rem;
+    margin-left: 5px;
+}
+
+.header{
+    height: 6rem;
+    display: flex;
+    align-items: center;
+
+}
+
+.header__title{
+    font-size: var(--medium-typho);
+    margin: 0;
+    position: absolute;
+    right: 40%;
+    font-weight: 600;
+    letter-spacing: .25rem;
+}
+
+/* NavBar */
+
+.navList{
+    display: flex;
+    list-style: none;
+    margin: 1rem 0 0 0 ;
+    padding: 0;
+}
+
+.navItem{
+    padding: 1rem;
+    font-size: var(--text-typho);
+}
+
+.navItem a{
+    text-decoration: none;
+    color: var(--color-primary);
+    font-weight: 600;
+    transition: color .3s;
+}
+
+.navItem a:hover{
+    color: #687278;
+}
+
+.lastItem{
+    width: 90%;
+}
+
+
+.Nav__loggedEmail{
+    color: var(--color-accent);
+    float: right;
+}
+
+/* Main Section */
+.homeSection h1 {
+    text-align: center;
+    color: var(--color-accent);
+}
+.homeSection p {
+    padding: 5rem 15rem;
+    font-size: var(--medium-typho);
+}
+
+/* Footer */
+
+.footer{
+    height: 10rem;
+    width: 100%;
+    font-size: var(--text-typho);
+    padding: .5rem;
+    margin-top: auto;
+}
+
+.footer__author{
+    font-size: var(--text-typho);
+    letter-spacing: .2rem;
+    color: var(--color-accent);
+    text-align: center;
+}
+
+/* Form Section */
+.btn{
+    width: 10rem;
+    padding: .8rem;
+    margin: 1rem 0;
+}
+
+.form{
+    width: 80%;
+    margin: 5rem auto ;
+    font-size: var(--text-typho);
+}
+
+legend{
+    font-size: 1.815rem;
+}
+
+.preferencesFieldset{
+    padding: 1.5rem;
+}
+
+select{
+    width: 10%;
+    height: 50px;
+    border: 1px solid var(--color-primary);
+    border-radius: 5px;
+    padding-left: 5px;
+    padding: 10px;
+    font-size: 18px;
+    color: #555;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(41, 18, 18);
+}
+select>option{
+    font-size: var(--text-typho);
+    color: var(--color-primary);
+    background-color: rgb(247, 247, 247);
+    background-image: none;
+    font-size: 18px;
+    height: 50px;
+    padding: 15px;
+    border: 1px solid rgb(41, 18, 18);
+}
+
+.optionForm{
+    padding: 10rem;
+}
+
+.radioSection{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -3px;
+}
+
+.radioItem{
+    margin: 0 1rem;
+}
+
+.input__text{
+    padding: 1rem 2.5rem;
+    border: 1px solid var(--color-primary);
+    border-radius: var(--border-radius);
+    /* outline: 0; */
+    color: var(--color-headings);
+    font-size: var(--text-typho)
+}
+
+.loginFieldset{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input__login{
+    width: 30%;
+    margin-bottom: 1rem;
+}
+
+.input__fullname {
+    width: 70rem;
+}
+
+.inputDivisor{
+    margin: 1rem 0;
+
+}
+
+/* Orders */
+.searchSection { 
+    display: flex;
+    justify-content: center;
+}
+
+.searchSection button{
+    margin: 0 .5rem;
+}
+
+.ordersTable{
+    width: 80%;
+    margin: 0 auto;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table td, table th {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f2f2f2;
+}
+
+.actionSection{
+    display: flex;
+    width: 140px;
+}
+
+.actionSection a {
+    text-decoration: none;   
+}
+
+.actionSection a:first-child{
+    color: green;
+    transition: color .3s;
+
+}
+
+.actionSection a:last-child{
+    color: red;
+    margin-left: .8rem;
+    transition: color .3s;
+
+}
+
+.actionSection a:last-child:hover{
+    color: #FF5C5C;
+    text-decoration: underline;
+}
+
+.actionSection a:first-child:hover{
+    color: #49ad2b;
+    text-decoration: underline;
+}
+
+.date { 
+    width: 12.5rem;
+}
+
+.orderDetailSection{
+    display: flex;
+    flex-direction: column;
+    width: 40rem;
+    margin: 0 auto;
+}
+
+
+
+.orderDetailSection button, .orderDetailSection input[type='submit']{
+    width: 10rem;
+}
+
+.submitSection { 
+    display: flex;
+}
+
